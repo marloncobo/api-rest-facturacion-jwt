@@ -1,9 +1,8 @@
 spring:
   datasource:
-    url: jdbc:mysql://db:3306/facturacion
-    username: user
-    password: password
-
+    url: ${DATABASE_URL:jdbc:mysql://db:3306/facturacion}
+    username: ${DATABASE_USERNAME:user}
+    password: ${DATABASE_PASSWORD:password}
 
   jpa:
     hibernate:
