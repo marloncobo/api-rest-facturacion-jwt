@@ -1,8 +1,9 @@
 spring:
   datasource:
-    url: ${DATABASE_URL:jdbc:mysql://db:3306/facturacion}
-    username: ${DATABASE_USERNAME:user}
-    password: ${DATABASE_PASSWORD:password}
+    # Las credenciales se inyectan via variables de entorno (Docker / Cloud Run)
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
 
   jpa:
     hibernate:
